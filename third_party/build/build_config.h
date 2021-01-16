@@ -149,6 +149,11 @@
 #elif defined(__pnacl__)
 #define ARCH_CPU_32_BITS 1
 #define ARCH_CPU_LITTLE_ENDIAN 1
+#elif defined(__riscv) && (__riscv_xlen == 64)
+#define ARCH_CPU_RISCV_FAMILY 1
+#define ARCH_CPU_RISCV64 1
+#define ARCH_CPU_64_BITS 1
+#define ARCH_CPU_LITTLE_ENDIAN 1
 #elif defined(__MIPSEL__)
 #if defined(__LP64__)
 #define ARCH_CPU_MIPS_FAMILY 1
